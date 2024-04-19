@@ -11,7 +11,7 @@ class ResistorColor {
             }
             //return Arrays.asList(colorCode).indexOf(color);
         }
-        return -1;
+        throw new IllegalArgumentException("Invalid color: " + color);
     }
 
     String[] colors() {

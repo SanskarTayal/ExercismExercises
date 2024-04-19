@@ -1,5 +1,5 @@
 public class Lasagna {
-    private int expectedMinuites = 40;
+    private final int expectedMinuites = 40;
 
     public int expectedMinutesInOven(){
         return expectedMinuites;

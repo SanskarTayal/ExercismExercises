@@ -7,7 +7,8 @@ class RnaTranscription {
         int n = dnaStrand.length();
         StringBuilder RnaTranscribe = new StringBuilder();
         for (int i = 0; i < n; i++) {
-            RnaTranscribe.append(getRNATranscription(dnaStrand.charAt(i)));
+            char rnaTranscription = getRNATranscription(dnaStrand.charAt(i));
+            RnaTranscribe.append(rnaTranscription);
         }
         return RnaTranscribe.toString();
     }
