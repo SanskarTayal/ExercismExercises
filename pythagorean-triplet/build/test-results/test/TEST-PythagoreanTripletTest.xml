@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PythagoreanTripletTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-18T17:05:55" hostname="DESKTOP-863VDA8" time="0.464">
+  <properties/>
+  <testcase name="tripletsWhoseSumIs30000()" classname="PythagoreanTripletTest" time="0.464"/>
+  <system-out><![CDATA[1200 14375 14425
+1875 14000 14125
+5000 12000 13000
+6000 11250 12750
+7500 10000 12500
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
