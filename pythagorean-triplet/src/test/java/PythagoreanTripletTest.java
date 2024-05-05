@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +9,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PythagoreanTripletTest {
-
     @Test
     public void tripletsWhoseSumIs12() {
         List<PythagoreanTriplet> actual
@@ -30,6 +30,7 @@ public class PythagoreanTripletTest {
                         .build();
         List<PythagoreanTriplet> expected
                 = Collections.singletonList(new PythagoreanTriplet(27, 36, 45));
+
         assertThat(actual).isEqualTo(expected);
     }
 

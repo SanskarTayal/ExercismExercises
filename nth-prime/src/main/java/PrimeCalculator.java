@@ -5,18 +5,19 @@ class PrimeCalculator {
             throw new IllegalArgumentException();
 
         int currentPrimePosition = 0;
-        int currentNumberToCheck = 2;
-        int currentPrimeNumber = 0;
+        int currentNumberToCheck = 1;
+     //   int currentPrimeNumber = 0;
 
         //Checking prime numbers till we find nth position prime number
         while (currentPrimePosition != nth) {
+            currentNumberToCheck++;
             if (isPrime(currentNumberToCheck)) {
                 currentPrimePosition++;
-                currentPrimeNumber=currentNumberToCheck;
+               // currentPrimeNumber=currentNumberToCheck;
             }
-            currentNumberToCheck++;
+
         }
-        return currentPrimeNumber;
+        return currentNumberToCheck;
     }
 
     boolean isPrime(int num) {

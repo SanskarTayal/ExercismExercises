@@ -1,25 +1,22 @@
-import java.util.HashMap;
 import java.util.Map;
 
-class RnaTranscription {
+import static java.util.Map.entry;
 
-    String transcribe(String dnaStrand) {
-        int n = dnaStrand.length();
+class RnaTranscription {
+    private static final Map<Character,Character> transcription = Map.ofEntries(entry('G','C'),entry('C','G'), entry('T','A'), entry('A','U') );
+
+    String transcribe(String dnaString) {
+        int n = dnaString.length();
         StringBuilder RnaTranscribe = new StringBuilder();
         for (int i = 0; i < n; i++) {
-            char rnaTranscription = getRNATranscription(dnaStrand.charAt(i));
+            char rnaTranscription = getRNATranscription(dnaString.charAt(i));
             RnaTranscribe.append(rnaTranscription);
         }
         return RnaTranscribe.toString();
     }
 
     private static char getRNATranscription(char c) {
-        Map<Character, Character> map = new HashMap<Character, Character>();
-        map.put('G', 'C');
-        map.put('C', 'G');
-        map.put('T', 'A');
-        map.put('A', 'U');
-        return map.get(c);
+        return transcription.get(c);
     }
 
 }

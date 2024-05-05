@@ -54,14 +54,15 @@ class PythagoreanTriplet {
 
         List<PythagoreanTriplet> build() {
             if (maxOfEachTriplet < 0)
-                maxOfEachTriplet = sumOfTriplets / 2;
+                maxOfEachTriplet = sumOfTriplets/2;
             List<PythagoreanTriplet> triplets = new ArrayList<>();
             for (int a = 1; a <= maxOfEachTriplet; a++) {
                 for (int b = a + 1; b <= maxOfEachTriplet; b++) {
                     int c = sumOfTriplets - b - a;
                     if (c <= maxOfEachTriplet && isPythagoreanTriplet(a, b, c)) {
                         triplets.add(new PythagoreanTriplet(a, b, c));
-                        //System.out.println(a+" "+b+" "+c);
+                        System.out.println(a+" "+b+" "+c);
+                     //   System.out.println(triplets.hashCode());
                     }
                 }
             }
